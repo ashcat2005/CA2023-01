@@ -23,17 +23,19 @@ def plot_many3D(photon_list):
     ax.plot_surface(xs, ys, zs, color='k')
 
     for p in photon_list:
+        color = 'crimson'
         sol = odeint(geodesics, p.iC, lmbda, args=(M,))
         indx = len(sol[:,1])
         for i in range(indx):
-            if sol[i,1]<2.*M +1e-10: 
+            if sol[i,1]<2.*M +1e-5: 
                 indx = i
+                color='black'
                 break
         # Cartesian coordinates
         x = sol[:indx,1]*np.sin(sol[:indx,2])*np.cos(sol[:indx,3])
         y = sol[:indx,1]*np.sin(sol[:indx,2])*np.sin(sol[:indx,3])
         z = sol[:indx,1]*np.cos(sol[:indx,2])
-        ax.plot(x, y, z, color='crimson')
+        ax.plot(x, y, z, color=color)
 
     ax.set_xlim(-20,20)
     ax.set_ylim(-20,20)

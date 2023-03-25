@@ -19,8 +19,8 @@ M = 1
 # Detector parameters
 D = 100*M
 iota = pi/2.5
-screen_side = 20
-n_pixels = 700
+screen_side = 20*M
+n_pixels = 100
 
 # Disk Model
 disk = thin_disk

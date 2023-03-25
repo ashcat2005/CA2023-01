@@ -16,7 +16,7 @@ M = 1
 D = 100*M
 iota = pi/4
 screen_side = 5
-n_pixels = 10
+n_pixels = 20
 
 # Metric
 metric = g

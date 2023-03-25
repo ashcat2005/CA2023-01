@@ -17,4 +17,4 @@ M = 1
 D = 100*M
 iota = pi/4
 screen_side = 15
-n_pixels = 15 #30
+n_pixels = 20
