@@ -101,7 +101,7 @@ def plot3D(sol):
     '''
     indx = len(sol[:,1])
     for i in range(indx):
-        if sol[i,1]<2.*M +1e-10: 
+        if sol[i,1]<2.*M +1e-5: 
             indx = i
             break
     # Cartesian coordinates
@@ -135,7 +135,7 @@ def plot3D(sol):
 M = 1
 
 # Initial Conditions in the image plane
-alpha = -5.
+alpha = 5.
 beta = -5.
 
 # Create a photon

@@ -46,7 +46,7 @@ def plot_many3D(photon_list):
         sol = odeint(geodesics, p.iC, lmbda, args=(M,))
         indx = len(sol[:,1])
         for i in range(indx):
-            if sol[i,1]<2.*M +1e-10: 
+            if sol[i,1]<2.*M +1e-5: 
                 indx = i
                 break
         # Cartesian coordinates
@@ -82,7 +82,9 @@ photon_list = []
 ab_coords = [[ 5.,  5.],
              [-5., -5.],
              [ 5., -5.],
-             [-5.,  5.]]
+             [-5.,  5.],
+             [0,0],
+             [3,4]]
 # Create photons
 for i in range(len(ab_coords)):
     alpha, beta = ab_coords[i]
