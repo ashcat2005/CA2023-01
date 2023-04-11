@@ -9,19 +9,20 @@ Parameters to create the Black Hole image
 from numpy import pi
 from schwarzschild import *
 from thin_disk import *
-from image_plane import image_plane
+from image_plane import *
 
 ###############################################################################
 ############################## METRIC DEFINITION ##############################
 ###############################################################################
-metric = g
-geodesics = geodesics
+#metric = g
+#geodesics = geodesics
 
 
 ###############################################################################
 ############################ BLACK HOLE PARAMETERS ############################
 ###############################################################################
 M = 1 # Mass
+blackhole = BlackHole(M)
 
 
 ###############################################################################

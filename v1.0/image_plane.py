@@ -37,7 +37,7 @@ class image_plane:
         self.alphaRange = linspace(-s_side, s_side, self.numPixels)
         self.betaRange = linspace(-s_side, s_side, self.numPixels)
         print ("Size of the screen in Pixels:", self.numPixels, "X", self.numPixels)
-        print ("Number of Pixels: ", (self.numPixels)**2)
+        print ("Number of Photons: ", (self.numPixels)**2)
 
 
     def photon_coords(self, alpha, beta, freq=1): 

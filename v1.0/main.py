@@ -17,10 +17,10 @@ from config import *
 image = Image()
 
 # Photons creation
-image.create_photons(detector)
+image.create_photons(blackhole, detector)
 
 # Create the image data
-image.create_image(acc_structure)
+image.create_image(blackhole, acc_structure)
 
 # Plot the image
-image.plot(savefig=True)
+image.plot(savefig=True, filename=filename)
